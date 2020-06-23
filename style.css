@@ -1,0 +1,391 @@
+/*
+text-transform: ; - deixa o texto todo em maiusculo,minusculo entre outros
+font-weight - Peso da fonte
+text-decoration - decoração de texto
+margin - espaçamento externo
+=======
+position - muda a posição padrão de algo e deve ser logo abaixo  seguido por top, righ, left e down deendendo da posição que quer deixar
+position absolute - mudar a posição do ponto inicial que ele se encontra
+position pode ser static, relative e absolute
+========
+
+box-sizing: border-box; - Soma espaçamento e porcentagem 
+border-width - tamanho da borda
+border-style - tipo de borda
+border-color - cor da borda
+border - forma unificada que UTILIZA os TRÊS tipos de bordas
+border-radius - Faz arredondamento. Pode usar border-radius-top, left. right ou down
+tag : mapeamento - faz o mapeamento 
+background: url(); coloca uma imagem de fundo atraves do css, o CSS, por padrão, copia e cola a imagem diversas vezes até ocupar todo o espaço do elemento 
+transiction -  Transição visual de um elemento
+Cursor - Altera o cursor do mouse
+Transformer scale() - Aumenta proporcionalmente um elemento.
+transformer rotate() - rotaciona.
+
+Float - Colar o elemento na lateral e deixar os outros elementos ao redor. Afeta completamente a estrutura da página, todos os elementos abaixo do float é atingido.
+clear - faz a limpeza do float. OBS: tem que ser de acordo com a posição.
+
+line-height - tamanho da linha, é proporficonal ao tamanho da fonte que é 1
+
+background: linear-gradient(gray, yellow, red, orange, blue) - degrade de 5 cores
+
+rgba() - cor da camada alfa
+
+opacity - Todos os elementos e todas as cores podem receber opacidade
+
+box-shadow -Propriedade para criar sombra. Pode ser aplicado em vários elementos.
+
+@media screen and (max-width: 480px) - Usado para configurar vizualização em telas de dispositivos moveis 
+
+width: calc() Para fazer contas no css de algum elemento.
+
+*/
+
+/*
+OBS: A melhor maneira de alinhar uma <div> ao centro é usando cálculo da margin automático
+     A borda - BORDER possue TRÊS aspectos importânte: TAMANHO(border-width), TIPO(border-style) e COR(border-color)
+     Em todos os elementos do HTML consigo mapear o comportamento com CSS e alterar o visual do elemento.
+     Quando queremos realçar alguma característica quando o mouse do usuário estiver por cima do elemento utilizamos :HOVER
+     Podemos usar qualquer caractere do Unicode veja em: https://unicode-table.com/pt/
+     Usar os seletores dos itens separados por vírgula replica a mesma configuração para outra TAG
+     Ordem de "precedência" ao trabalhar com stylo  em CSS o id tem peso 100 class tem peso 10 e tag peso 1 então somamos os pesos. O mais forte dos três é o inline pois fica diretamente na TAG.
+
+-------------------------------------------------------------------------------
+     pseudo elementos - São criados no CSS e não influencia no HTML. 
+     Seletores avançados - usa-se dinal de > + ~ selecionar determinada classe
+     Seletor >, para acessar os filhos de determinado elemento.
+     Seletor +, para acessar o primeiro irmão de determinado elemento. 
+     Seletor ~, para acessar todos os irmãos de determinado elemento.
+     Seletor not, para acessar os elementos, exceto algum.
+     OBS: seletores avançados tem a mesma "força"
+-------------------------------------------------------------------------------
+     A principal tática para não perder muito tempo criando layouts responsivos é: Usar medidas proporcionais para tudo, Criar um layout fluido que se adapte sempre.
+     
+
+*/
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+header{
+    background: #bbbbbb;
+    padding: 20px 0;
+}
+
+.caixa{
+    /* Largura padrão que se utiliza na web é 940px*/
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+/* acessando todos os li dentro da tag nav */
+nav li{
+    display: inline;
+    /* funciona no sentido horário*/
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    /* deixa o text em maiusculo*/
+    text-transform: uppercase;
+    color: #000000;
+    /* Peso da fonte*/
+    font-weight: bold;
+    font-size: 22px;
+    /*retira qualquer decoração padrão do texto  SUBLINHADO*/
+    text-decoration: none;
+}
+/* faz maepeamento*/
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.produtos li:hover {
+    border-color: #c78c19;
+    font-size: 40px;
+}
+
+.produtos li:hover h2{
+    font-size: 34px;
+}
+
+.produtos li:active{
+    border-color: #088c19;
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /*faz a soma dos pixel junto com percentual*/
+    box-sizing: border-box;
+    /* 3 tipos para compor uma borda
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    */
+    border: 2px solid #000000;
+    border-radius: 10px;
+
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+
+footer{
+    text-align: center;
+    /*serve para colocar uma imagem de fundo atraves do css*/
+    background: url(bg.jpg);
+    padding: 40px 0;
+}
+
+.copyright{
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+main {
+    
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px ;
+}
+/*virgula , replica a mesma configuração para outro elemento 
+form input, form textarea{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+*/
+.input-padrao{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    /*faz a transição */
+    transition: 1s all;
+    cursor: pointer;
+    
+}
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table{
+    margin: 20px 0 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*css página inicial*/
+.banner {
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    /*em - medida proporcial para pixel, sempre vai ser o dobro da que já está*/
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    
+   
+}
+
+
+
+/*pseudo elemento
+
+.titulo-principal:first-letter{
+    font-weight: bolder;
+
+.titulo-principal:before{
+    content: "[ ";
+
+}
+/*pseudo elemento
+.titulo-principal:after{
+    content: " ]";
+}
+*/
+
+
+.principal{
+    padding: 3em 0 ;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p{
+    margin:  0 0 1em;
+}
+
+.principal{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    /*float - levanta a imagem*/
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.mapa{
+    padding: 3em 0;
+    /*Deixa cor de fundo gradiente
+    pode alterar a inclinação do gradiente com: deg
+    */
+    background:linear-gradient(#fefefe, #888888) ;
+}
+
+.mapa-conteudo{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens{
+    /*tamanho da linha*/
+    line-height: 1.5;
+}
+
+/*classe pseudo elemento*/
+.itens:first-child{
+    font-weight: bold;
+}
+/*pseudo elemento*/
+.itens:before{
+    content: "✭";
+
+}
+
+.imagem-beneficios{
+    width: 60%;
+    opacity: 1;
+    transition:400ms;
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.imagem-beneficios:hover{
+    opacity: 0.3;
+}
+
+.video{
+    width: 560px;
+    margin: 2em auto;
+}
+
+
+/*Configuração para tela de celular*/
+@media screen and (max-width: 480px){
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video{
+		width: auto;
+
+	}
+	h1{
+		text-align: center;
+
+	}
+
+	nav{
+		position: static;
+	}
+
+	.lista-beneficios, .imagem-beneficios{
+		widows: 100%;
+	}
+}
+

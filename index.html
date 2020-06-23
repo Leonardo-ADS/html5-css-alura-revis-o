@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--tag para configurar tela de visualização de dispositivos moveis-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Alura</title>
+    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+
+    
+    
+</head>
+
+<body>
+    
+    <!--cabeçalho da página-->
+    <!--TAG header serve para cabeçalho-->
+    <header>
+        <div class="caixa">
+            <h1><img src="/logo.png" alt=""></h1>
+            
+            <!--<nav> - tag de navegação -->
+                <nav>
+                    <ul>
+                        <!-- <a> - tag ancora que leva a outra página -->
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="produtos.html">Produtos</a></li>
+                            <li><a href="contato.html">Contatos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <img class="banner" src="banner.jpg" alt="">
+            
+             <main>
+               
+                <section class="principal">
+                    <h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
+                    
+                    <img class="utensilios" src="utensilios.jpg" alt="Utensilios de um barbeiro.">
+                    
+                    <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o
+                        seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada
+                        dia.</p>
+                        
+                        <!--por padrão a font dos navegadores vem no tamanho 16px-->
+                        <!--id="" marcador de identificação da tag, pode ser colocado um nome qualquer coerente-->
+                        <p id="missao" ><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+                        
+                        <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de
+                            excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+                </section>
+
+                <!--Importando um mapa-->
+                <section class="mapa">
+                    <h3 class="titulo-principal">Nosso estabelecimento</h3>
+                    <p>Nosso estabelecimento está localizado no coração da cidade</p>
+                    <div class="mapa-conteudo">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.448598130935!2d-46.6346533859866!3d-23.588239368468358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1589893773541!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                </section>
+                        
+                        <section class="beneficios">
+                            <h3 class="titulo-principal">Benefícios</h3>
+                            
+                            <div class="conteudo-beneficios">
+                                <ul class="lista-beneficios">
+                                    <!-- class="" Mesma funcionalidade do ID com diferença que são repetiveis -->
+                                    <li class="itens">Atendimento aos Clientes</li>
+                                    <li class="itens">Espaço diferenciado</li>
+                                    <li class="itens">Localização</li>
+                                    <li class="itens">Profissionais Qualificados</li>
+                                    <li class="itens">Pontualidade</li>
+                                    <li class="itens">Limpeza</li>
+
+                                </ul><img  src="beneficios.jpg" class="imagem-beneficios" alt="">
+                           </div>
+                            <div class="video" ><iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                            
+                        </section>
+             </main>        
+                    <!--TAG footer serve para rodapé-->
+                    <footer>
+                        <img src="logo-branco.png" alt="">
+                        <p class="copyright">&copy; Copyright Barbearia Alura - 2020</p>
+                    </footer>
+                    
+                    
+                    
+                </body>
+                
+                </html>
+                
+ <!--
+TODA TAG TEM UM INICIO E FECHAMENTO <> </>
+
+<h1> - existem 6 tipos de níveis de conteúdo
+
+<p> -  tag de paragrafo 
+
+<strong> - marca uma palavra com negrito
+
+<em> - tranforma a palavra em italico
+
+<link> - faz a ligação de uma página com a outra
+
+<img> - chama uma imagem para a página - src é o "endereço" da pasta onde ta o arquivo
+
+<ul><li> </li> </ul>- lista não ordenada
+
+<div> - serve para marcar nossos conteúdos separando por bloco
+
+<header > - cabeçalho da página. Foi implementado no HTML 5. Deve ter mais destaque
+
+<a href=""> - tag  âncora para outro ponto na internet
+    
+<nav> - tag de navegação
+
+<header> - TAG header serve para cabeçalho
+
+<main> - TAG main serve para conteudo princial
+
+<form> - dentro do formulario temos as entrada dos dados TAGS INPUTs
+
+<input> - todo input tem um tipo (type) e seu nome para informar do que se trata aquele campo
+
+<label> - Etiqueta informativa para que serve aquele dado. Todo LABEL anda junto com um INPUT
+
+<textarea> - Tag para usuário digitar um texto
+
+<select> - Tag de seleção. Comosto por várias opções
+
+<fieldset> - Usado para agrupar informações especificas. Caso houver titulos, devem vir seguido pela tag <legend>
+                                                                                
+<table> - tabela. Roda tabela tem linha e coluna, <td> - coluna e <tr> - linha. Toda tabela pode ser separado em três cabeçalho conteudo e rodapé 
+<thead>, <tbody> e <tfoot>
+
+<section> - Usado para um bloco onde o conteúdo tenha o mesmo significado, o mesmo sentido.
+
+<iframe> - serve para abrir uma "janela" no site para por endereço de localização
+    
+-->
+                                                                                        
+ <!--                                                                               
+OBS: Existem 3 formas de configurar o css: INLINE(na linha da tag), dentro de HEAD e por arquivo externo com extansão .css utilizando a tag <link> no HEAD
+                                                                                        
+Existem dois tipos de listas: ordenadas(<ol>) e não ordenada(<ul>) 
+                                                                                            
+Por padrão o navegador cria o estilo para todas as tags que ele acha adequadas, então precisamos removê-lo, para que o estilo que criamos não seja influenciado pelo estilo que o navegador adiciona.
+veja mais: https://meyerweb.com/eric/tools/css/reset/ 
+                                                                                            
+Tags semânticas - Para deixar o código mais legível, tanto para nós, quanto para o navegador
+                                                                                            
+Formulário é responsavel por pegar um conteúdo e enviar para outra página e é tratado com a nova página
+usamos formulário quando queremos enviar DADOS para um SERVIDOR, para CAPTURAR informações que o usuário digitar e qdo queremos ENVIAR DADOS para outra página
+                                                                                            
+Todo INPUT é único, então utiliza-se a TAG ID para indentificalo em css e fazer as alterações devidas
+                                                                                            
+LABEL e INPUT por padrão possuem o display inline
+                                                                                            
+INPUT propriedade NAME - A propriedade name só pode ser "preenchida" uma única vez, por isso que, quando eu seleciono um dos itens, ele desmarca o outro, mantendo somente um selecionado.
+                                                                                            
+INPUTS PARA CELULAR - Campos inputs para acessibilidade para celulare.
+veja mais em: http://mobileinputtypes.com/
+
+Quando queremos "falar" de estilo usamos class="" e quando queremos "falar" de comportamento usamos id=""
+
+Fontes externas - Podemos usar estilos de fonte diferente do padrão do navegador.
+veja mais em: https://fonts.google.com/
+                                                                                            
+-->                                    
+                                                                                            
+                                                                                            
+                                                                                       
+                                                                                        
+<!--
+                                                                                            
+Salvamos o arquivo principal da pagina como: index.html
+                                                                                            
+!doctype html - informa ao navegador que estamos usando a ultima versão do html
+                                                                                            
+<html><html> - serve para marcar tudo oq é html   
+                                                                                            
+<meta charset="utf8"> - serve para resolver problemas com acentos 
+                                                                                            
+<lang pt-br> - informa qual a linguagem da página
+                                                                                                
+<title> - serve para colocar o titulo de uma página
+                                                                                                    
+<head> - são todas as informações que passamos para o navegador
+                                                                                                        
+<body> - são informações que é passado para exibir no navegador
+                                                                                                            
+-->

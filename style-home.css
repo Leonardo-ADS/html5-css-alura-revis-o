@@ -1,0 +1,90 @@
+/*
+
+OBS: Para uma boa usuabilidade, usar as folhas de estilo  no mesmo nivel hierarquico do html
+Tudo que eu adiciono no elemento pai reflete nos elementos filhos
+Podemos representar cores no CSS por: Binário, hexadecimal, RGB e com os nomes das cores
+Todo elemento é alinhado pela linha de baixo
+
+Binario - 0 ou 1
+hexadecimal - 0 AUSENCIA DE COR e F MAXIMA DE COR 
+RGB 0 ate 255  rgb( , , ) #  _ _  _ _  _ _ 
+
+Quando usamos uma TAG e for referenciar a TAG no css usamos o nome da TAG 
+Para referenciar um ID(todo ID é único) no css usamos a tralha # 
+Para utilizar uma CLASS de uma TAG utilizamos .nome_da_classe 
+
+Existem 4 tipos de dimensoes no CSS  1 largura(width) 2 altura(height) 3 e 4 espaçamento INTERNO(padding) e EXTERNO(margin) (altura e largura pode ser por pixel ou %)
+
+
+
+--------------------------------------
+text-align - alinhamento de texto
+background - cor de fundo
+color - cor do texto
+font-size - tamanho da fonte
+height - altura
+widith - largura
+padding - espaçamento interno
+margin - espaçamento externo
+font-style: ; - stilo de fonte
+display - pode ser inline(não deixa alterar o espaçamento interno), block( bloqueia o conteúdo daquela linha.) ou inline-block(ocupa somente o tamanho do seu conteudo, pode ser ajustado, tanto na largura, quanto na altura.)
+vertical-align: ; - alinha o elemento
+
+*/
+
+body{
+    
+}
+
+#banner{
+    width: 100%;
+}
+
+.principal{
+    background: #cccccc;
+    padding: 30px;
+}
+
+.titulo-principal{
+    padding-left: 20px;
+    box-shadow: 2px 2px red;
+}
+
+.titulo-centralizado{
+    text-align: center;
+}
+
+P{
+    text-align: center;
+}
+
+#missao{
+    font-size: 20px;
+}
+
+
+/*busca todos os strongs dentre do em*/
+em strong{
+    color: red;
+}
+
+.itens{
+    font-style: italic;
+}
+
+.beneficios{
+    background:#ffffff;
+    padding: 20px;
+}
+
+
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+.imagem-beneficios{
+    width: 50%;
+}
